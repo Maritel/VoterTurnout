@@ -56,3 +56,18 @@ def format_submission(test_labels,
                delimiter=',',
                header='id,PES1',
                comments='')
+
+
+# 'X' is training points, 'y' is training labels
+# 'proportion' is a float < 1 that indicates what proportion of examples should
+#   be used for validation
+def split_validation_set(X, y, proportion):
+    assert len(X) == len(y)
+    v_size = int(len(X) * proportion)
+    v_indices = np.random.choice(a=len(X), size=v_size, replace=False)
+
+    X_valid = X[v_indices]
+    y_valid = y[v_indices]
+    X_train = np.delete(X, obj=v_indices, axis=0)
+    y_train = np.delete(y, obj=v_indices, axis=0)
+    return (X_train, y_train), (X_valid, y_valid)

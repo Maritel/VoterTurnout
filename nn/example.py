@@ -2,7 +2,7 @@ import utils
 import nn.nnutils as nnutils
 import numpy as np
 import keras
-from keras.layers.core import Dense, Activation, Dropout
+from keras.layers.core import Dense
 
 training_points, training_labels = \
     utils.get_training_data("../data/train_2008.csv")
