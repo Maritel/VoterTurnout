@@ -28,7 +28,7 @@ def try_parameters(hidden_layers,
                    y_train,
                    X_valid,
                    y_valid,
-                   n_epochs=1,
+                   n_epochs=10,
                    loss='mean_squared_error',
                    optimizer='adam'):
     assert len(hidden_layers) >= 1
@@ -47,7 +47,7 @@ def try_parameters(hidden_layers,
         if hidden_layer[2] != 0:
             model.add(Dropout(hidden_layer[2]))
 
-    model.add(Dense(1, activation='softmax'))
+    model.add(Dense(1, activation='sigmoid'))
     model.compile(loss=loss, optimizer=optimizer, metrics=['accuracy'])
 
     model.fit(X_train, y_train, nb_epoch=n_epochs)
@@ -71,11 +71,13 @@ def try_parameters(hidden_layers,
 
 # Only dense layers are used.
 # (num neurons, activation, dropout) for represent each layer
-hidden_layers = [(500, 'relu', 0.3), (200, 'relu', 0), (100, 'relu', 0), (50, 'relu', 0)]
+hidden_layers = [(300, 'relu', 0.3), (200, 'relu', 0), (100, 'relu', 0)]
 
 try_parameters(hidden_layers,
                X_train,
                y_train,
                X_valid,
                y_valid,
-               optimizer='adam')
+               optimizer='adam',
+               n_epochs=2)
+

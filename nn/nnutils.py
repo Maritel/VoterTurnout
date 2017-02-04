@@ -10,13 +10,13 @@ from keras import backend as K
 def standardize_labels(array):
     for y in np.nditer(array, op_flags=['readwrite']):
         if y == 2:
-            y[...] = -1
+            y[...] = 0
 
 
 # Performs the reverse of standardize_labels
 def unstandardize_labels(array):
     for y in np.nditer(array, op_flags=['readwrite']):
-        if y == -1:
+        if y == 0:
             y[...] = 2
 
 

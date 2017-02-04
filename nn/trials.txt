@@ -1,32 +1,15 @@
-{'config': {'input_dim': 1920, 'name': 'dense_1', 'activation': 'relu', 'W_constraint': None, 'input_dtype': 'float32', 'b_regularizer': None, 'batch_input_shape': (None, 1920), 'trainable': True, 'init': 'glorot_uniform', 'output_dim': 30, 'bias': True, 'W_regularizer': None, 'b_constraint': None, 'activity_regularizer': None}, 'class_name': 'Dense'}
-{'config': {'input_dim': None, 'name': 'dense_2', 'activation': 'tanh', 'W_constraint': None, 'b_regularizer': None, 'trainable': True, 'init': 'glorot_uniform', 'output_dim': 5, 'bias': True, 'W_regularizer': None, 'b_constraint': None, 'activity_regularizer': None}, 'class_name': 'Dense'}
-{'config': {'input_dim': None, 'name': 'dense_3', 'activation': 'softmax', 'W_constraint': None, 'b_regularizer': None, 'trainable': True, 'init': 'glorot_uniform', 'output_dim': 1, 'bias': True, 'W_regularizer': None, 'b_constraint': None, 'activity_regularizer': None}, 'class_name': 'Dense'}
-loss=1.04565136695 // acc=0.738587158263 // 
+{'class_name': 'Dense', 'config': {'b_constraint': None, 'output_dim': 300, 'W_regularizer': None, 'activity_regularizer': None, 'input_dim': 1920, 'trainable': True, 'name': 'dense_1', 'W_constraint': None, 'bias': True, 'init': 'glorot_uniform', 'input_dtype': 'float32', 'batch_input_shape': (None, 1920), 'activation': 'relu', 'b_regularizer': None}}
+{'class_name': 'Dense', 'config': {'b_constraint': None, 'output_dim': 200, 'name': 'dense_2', 'activity_regularizer': None, 'input_dim': None, 'trainable': True, 'W_regularizer': None, 'W_constraint': None, 'bias': True, 'init': 'glorot_uniform', 'activation': 'relu', 'b_regularizer': None}}
+{'class_name': 'Dense', 'config': {'b_constraint': None, 'output_dim': 100, 'name': 'dense_3', 'activity_regularizer': None, 'input_dim': None, 'trainable': True, 'W_regularizer': None, 'W_constraint': None, 'bias': True, 'init': 'glorot_uniform', 'activation': 'relu', 'b_regularizer': None}}
+{'class_name': 'Dense', 'config': {'b_constraint': None, 'output_dim': 1, 'name': 'dense_4', 'activity_regularizer': None, 'input_dim': None, 'trainable': True, 'W_regularizer': None, 'W_constraint': None, 'bias': True, 'init': 'glorot_uniform', 'activation': 'sigmoid', 'b_regularizer': None}}
+<keras.optimizers.Adam object at 0x000000C7FE984E80>
+loss=0.156656137848 // acc=0.772856612659 // 
 
-{'class_name': 'Dense', 'config': {'activation': 'relu', 'bias': True, 'batch_input_shape': (None, 1920), 'b_constraint': None, 'W_regularizer': None, 'init': 'glorot_uniform', 'trainable': True, 'b_regularizer': None, 'input_dim': 1920, 'activity_regularizer': None, 'output_dim': 30, 'name': 'dense_1', 'W_constraint': None, 'input_dtype': 'float32'}}
-{'class_name': 'Dense', 'config': {'activation': 'tanh', 'bias': True, 'name': 'dense_2', 'init': 'glorot_uniform', 'trainable': True, 'b_regularizer': None, 'input_dim': None, 'activity_regularizer': None, 'output_dim': 5, 'W_regularizer': None, 'W_constraint': None, 'b_constraint': None}}
-{'class_name': 'Dense', 'config': {'activation': 'softmax', 'bias': True, 'name': 'dense_3', 'init': 'glorot_uniform', 'trainable': True, 'b_regularizer': None, 'input_dim': None, 'activity_regularizer': None, 'output_dim': 1, 'W_regularizer': None, 'W_constraint': None, 'b_constraint': None}}
-<keras.optimizers.RMSprop object at 0x0000007D4D2D1978>loss=1.01150562911 // acc=0.747123592792 // 
-
-{'config': {'b_regularizer': None, 'output_dim': 30, 'init': 'glorot_uniform', 'W_regularizer': None, 'name': 'dense_1', 'batch_input_shape': (None, 1920), 'input_dim': 1920, 'input_dtype': 'float32', 'bias': True, 'W_constraint': None, 'trainable': True, 'b_constraint': None, 'activity_regularizer': None, 'activation': 'relu'}, 'class_name': 'Dense'}
-{'config': {'trainable': True, 'output_dim': 5, 'init': 'glorot_uniform', 'W_regularizer': None, 'name': 'dense_2', 'input_dim': None, 'bias': True, 'W_constraint': None, 'b_regularizer': None, 'b_constraint': None, 'activity_regularizer': None, 'activation': 'tanh'}, 'class_name': 'Dense'}
-{'config': {'trainable': True, 'output_dim': 1, 'init': 'glorot_uniform', 'W_regularizer': None, 'name': 'dense_3', 'input_dim': None, 'bias': True, 'W_constraint': None, 'b_regularizer': None, 'b_constraint': None, 'activity_regularizer': None, 'activation': 'softmax'}, 'class_name': 'Dense'}
-<keras.optimizers.SGD object at 0x000000306668FB00>loss=1.04664109869 // acc=0.738339725327 // 
-
-{'class_name': 'Dense', 'config': {'bias': True, 'batch_input_shape': (None, 1920), 'activation': 'relu', 'W_regularizer': None, 'b_regularizer': None, 'name': 'dense_1', 'init': 'glorot_uniform', 'output_dim': 100, 'input_dtype': 'float32', 'activity_regularizer': None, 'W_constraint': None, 'input_dim': 1920, 'b_constraint': None, 'trainable': True}}
-{'class_name': 'Dropout', 'config': {'p': 0.3, 'name': 'dropout_1', 'trainable': True}}
-{'class_name': 'Dense', 'config': {'bias': True, 'activation': 'relu', 'W_regularizer': None, 'b_regularizer': None, 'name': 'dense_2', 'init': 'glorot_uniform', 'output_dim': 50, 'trainable': True, 'W_constraint': None, 'input_dim': None, 'b_constraint': None, 'activity_regularizer': None}}
-{'class_name': 'Dense', 'config': {'bias': True, 'activation': 'relu', 'W_regularizer': None, 'b_regularizer': None, 'name': 'dense_3', 'init': 'glorot_uniform', 'output_dim': 30, 'trainable': True, 'W_constraint': None, 'input_dim': None, 'b_constraint': None, 'activity_regularizer': None}}
-{'class_name': 'Dense', 'config': {'bias': True, 'activation': 'softmax', 'W_regularizer': None, 'b_regularizer': None, 'name': 'dense_4', 'init': 'glorot_uniform', 'output_dim': 1, 'trainable': True, 'W_constraint': None, 'input_dim': None, 'b_constraint': None, 'activity_regularizer': None}}
-<keras.optimizers.Adam object at 0x0000006A0FCC7DA0>
-loss=0.996659656157 // acc=0.750835085961 // 
-
-{'config': {'W_regularizer': None, 'trainable': True, 'input_dim': 1920, 'output_dim': 500, 'init': 'glorot_uniform', 'b_regularizer': None, 'name': 'dense_1', 'b_constraint': None, 'batch_input_shape': (None, 1920), 'W_constraint': None, 'activation': 'relu', 'input_dtype': 'float32', 'activity_regularizer': None, 'bias': True}, 'class_name': 'Dense'}
-{'config': {'p': 0.3, 'trainable': True, 'name': 'dropout_1'}, 'class_name': 'Dropout'}
-{'config': {'W_regularizer': None, 'trainable': True, 'input_dim': None, 'output_dim': 200, 'init': 'glorot_uniform', 'b_regularizer': None, 'name': 'dense_2', 'b_constraint': None, 'W_constraint': None, 'activation': 'relu', 'activity_regularizer': None, 'bias': True}, 'class_name': 'Dense'}
-{'config': {'W_regularizer': None, 'trainable': True, 'input_dim': None, 'output_dim': 100, 'init': 'glorot_uniform', 'b_regularizer': None, 'name': 'dense_3', 'b_constraint': None, 'W_constraint': None, 'activation': 'relu', 'activity_regularizer': None, 'bias': True}, 'class_name': 'Dense'}
-{'config': {'W_regularizer': None, 'trainable': True, 'input_dim': None, 'output_dim': 50, 'init': 'glorot_uniform', 'b_regularizer': None, 'name': 'dense_4', 'b_constraint': None, 'W_constraint': None, 'activation': 'relu', 'activity_regularizer': None, 'bias': True}, 'class_name': 'Dense'}
-{'config': {'W_regularizer': None, 'trainable': True, 'input_dim': None, 'output_dim': 1, 'init': 'glorot_uniform', 'b_regularizer': None, 'name': 'dense_5', 'b_constraint': None, 'W_constraint': None, 'activation': 'softmax', 'activity_regularizer': None, 'bias': True}, 'class_name': 'Dense'}
-<keras.optimizers.Adam object at 0x00000048EFA655C0>
-loss=1.00210317939 // acc=0.749474205151 // 
+{'config': {'b_constraint': None, 'bias': True, 'trainable': True, 'input_dim': 1920, 'b_regularizer': None, 'input_dtype': 'float32', 'activity_regularizer': None, 'output_dim': 300, 'batch_input_shape': (None, 1920), 'init': 'glorot_uniform', 'W_constraint': None, 'name': 'dense_1', 'W_regularizer': None, 'activation': 'relu'}, 'class_name': 'Dense'}
+{'config': {'trainable': True, 'name': 'dropout_1', 'p': 0.3}, 'class_name': 'Dropout'}
+{'config': {'b_constraint': None, 'bias': True, 'trainable': True, 'input_dim': None, 'b_regularizer': None, 'activity_regularizer': None, 'output_dim': 200, 'init': 'glorot_uniform', 'W_constraint': None, 'name': 'dense_2', 'W_regularizer': None, 'activation': 'relu'}, 'class_name': 'Dense'}
+{'config': {'b_constraint': None, 'bias': True, 'trainable': True, 'input_dim': None, 'b_regularizer': None, 'activity_regularizer': None, 'output_dim': 100, 'init': 'glorot_uniform', 'W_constraint': None, 'name': 'dense_3', 'W_regularizer': None, 'activation': 'relu'}, 'class_name': 'Dense'}
+{'config': {'b_constraint': None, 'bias': True, 'trainable': True, 'input_dim': None, 'b_regularizer': None, 'activity_regularizer': None, 'output_dim': 1, 'init': 'glorot_uniform', 'W_constraint': None, 'name': 'dense_4', 'W_regularizer': None, 'activation': 'sigmoid'}, 'class_name': 'Dense'}
+<keras.optimizers.Adam object at 0x000000CC096A5CF8>
+loss=0.159170619036 // acc=0.765681059057 // 
 
